@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "scatterbrain"
+version = "0.1.0"
+description = "Note taking and task management application."
+license = "MIT"
+authors = ["Raymond Lewis <raymond0256@gmail.com>"]
+readme = "README.md"
+homepage = "https://github.com/raymond0256/scatterbrain"
+repository = "https://github.com/raymond0256/scatterbrain"
+keywords = ["hypermodern"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+flask = "^1.1.2"
+
+[tool.poetry.dev-dependencies]
+jupyter = "^1.0.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

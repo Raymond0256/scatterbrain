@@ -12,6 +12,7 @@ keywords = ["hypermodern"]
 [tool.poetry.dependencies]
 python = "^3.6"
 flask = "^1.1.2"
+flake8-import-order = "^0.18.1"
 
 [tool.poetry.dev-dependencies]
 jupyter = "^1.0.0"

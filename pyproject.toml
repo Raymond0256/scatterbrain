@@ -12,7 +12,6 @@ keywords = ["hypermodern"]
 [tool.poetry.dependencies]
 python = "^3.6"
 flask = "^1.1.2"
-flake8-import-order = "^0.18.1"
 
 [tool.poetry.dev-dependencies]
 jupyter = "^1.0.0"
@@ -23,10 +22,11 @@ pytest-mock = "^3.5.1"
 flake8 = "^3.8.4"
 black = "^20.8b1"
 flake8-black = "^0.2.1"
-mypy = "^0.790"
 flake8-bugbear = "^20.11.1"
 flake8-bandit = "^2.1.2"
 safety = "^1.10.3"
+flake8-import-order = "^0.18.1"
+mypy = "^0.800"
 
 [build-system]
 requires = ["poetry>=0.12"]

@@ -5,7 +5,7 @@ import tempfile
 import nox
 
 
-nox.options.sessions = "lint", "safety", "tests"
+nox.options.sessions = "lint", "mypy", "tests"
 locations = "src", "tests", "noxfile.py"
 python_latest = "3.9"
 python_range = ["3.9", "3.8"]
@@ -19,6 +19,7 @@ def install_with_constraints(session, *args, **kwargs):
             "export",
             "--dev",
             "--format=requirements.txt",
+            "--without-hashes",
             f"--output={requirements.name}",
             external=True,
         )
@@ -29,7 +30,7 @@ def install_with_constraints(session, *args, **kwargs):
 def tests(session):
     """Run pytests for each python version."""
     args = session.posargs or ["--cov", "-m", "not e2e"]
-    session.run("poetry", "install", external=True)
+    session.run("poetry", "install", "--no-dev", external=True)
     install_with_constraints(
         session, "coverage[toml]", "pytest", "pytest-cov", "pytest-mock"
     )

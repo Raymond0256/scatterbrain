@@ -3,7 +3,6 @@ select = ANN,B,B9,BLK,C,E,F,I,S,W
 ignore = E203,E501,W503
 per-file-ignores =
     tests/*:S101,ANN
-    noxfile.py:ANN
 max-line-length = 80
 max-complexity = 10
 application-import-names = scatterbrain, tests

@@ -9,6 +9,7 @@ nox.options.sessions = "lint", "mypy", "tests"
 locations = "src", "tests", "noxfile.py"
 python_latest = "3.9"
 python_range = ["3.9", "3.8"]
+package = "scatterbrain"
 
 
 def install_with_constraints(session, *args, **kwargs):
@@ -44,6 +45,7 @@ def lint(session):
     install_with_constraints(
         session,
         "flake8",
+        "flake8-annotations",
         "flake8-bandit",
         "flake8-black",
         "flake8-bugbear",
@@ -83,3 +85,12 @@ def mypy(session):
     args = session.posargs or locations
     install_with_constraints(session, "mypy")
     session.run("mypy", *args)
+
+
+@nox.session(python=python_range)
+def typeguard(session):
+    """Run time type checking."""
+    args = session.posargs or ["-m", "not e2e"]
+    session.run("poetry", "install", "--no-dev", external=True)
+    install_with_constraints(session, "pytest", "pytest-mock", "typeguard")
+    session.run("pytest", f"--typeguard-packages={package}", *args)

@@ -1,0 +1,25 @@
+{
+    "title": "Daily Goals",
+    "boards": [
+        "Daily"
+    ],
+    "due_date": "2021-01-25-18:03UTC",
+    "scheduled_time": "2021-01-25-06:30UTC",
+    "reminder": "+0000-00-00-00:20",
+    "members": [
+        "Raymond"
+    ],
+    "addenda": [
+        {
+            "type": "checklist",
+            "items": [
+                {
+                    "title": "oatmeal",
+                    "description": "Make a healthy food choice",
+                    "checked": false,
+                    "due_date": "2021-01-25-18:03UTC"
+                }
+            ]
+        }
+    ]
+}

@@ -50,6 +50,7 @@ def lint(session: Session) -> None:
         "flake8-bugbear",
         "flake8-docstrings",
         "flake8-import-order",
+        "darglint",
     )
     session.run("flake8", *args)
 
@@ -97,3 +98,12 @@ def typeguard(session: Session) -> None:
     session.run("poetry", "install", "--no-dev", external=True)
     install_with_constraints(session, "pytest", "pytest-mock", "typeguard")
     session.run("pytest", f"--typeguard-packages={package}", *args)
+
+
+# @nox.session(python=python_range)
+# def xdoctest(session: Session) -> None:
+#     """Run examples with xdoctest."""
+#     args = session.posargs or ["all"]
+#     session.run("poetry", "install", "--no-dev", external=True)
+#     install_with_constraints(session, "xdoctest")
+#     session.run("python", "-m", "xdoctest", package, *args)

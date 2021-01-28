@@ -7,6 +7,7 @@ Scatterbrain Note Taking
     :maxdepth: 1
 
     license
+    reference
 
 
 Documenting the Scatterbrain project.

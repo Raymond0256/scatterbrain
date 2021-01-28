@@ -6,7 +6,7 @@ Scatterbrain Note Taking
     :hidden:
     :maxdepth: 1
 
-    liscense
+    license
 
 
 Documenting the Scatterbrain project.

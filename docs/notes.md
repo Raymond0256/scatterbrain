@@ -23,4 +23,8 @@ The complexity of the card system is going to take some planning.  I want for th
 * Board: A collection of lists.
 * Lists: A collection of cards that functions like labels on a board.
 * Cards: A task that can contain sublists, but is usually a full unit of work.
-* Subtask: An item on a checklist that is a component of the task for the card.
+* Subtask: An item on a checklist that is a component of the task for the card.  
+
+## 2021-01-29 22:34:18  
+
+I need to finish the user stories so that I can narrow down the details for the task object.  

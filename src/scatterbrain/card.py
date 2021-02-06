@@ -1,4 +1,5 @@
 """Task Card Class."""
+from datetime import datetime
 
 
 class Card():
@@ -6,4 +7,9 @@ class Card():
 
     def __init__(self, title: str) -> None:
         """Initializer for Task Card."""
-        self._title = title
+        self._title: str = title
+        self._description = ""
+    
+    def add_due_date(self, due_date: datetime) -> None:
+        """Add a due date to the card."""
+        self._due_date = due_date
